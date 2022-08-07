@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddControllers();
+builder.Services.AddServerSideBlazor();
 //Registering the service class in the IOC container
 //Trasient objects are always different; a new instance is provided to every controller and every service.
 builder.Services.AddTransient<JsonFileProductService>();
@@ -29,6 +30,8 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 app.MapControllers();
+//Blazor is a framework for building interactive client-side web UI with .NET:
+app.MapBlazorHub();
 
 app.Run();
 
