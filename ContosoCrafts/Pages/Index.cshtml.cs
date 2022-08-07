@@ -1,6 +1,5 @@
 ﻿using ContosoCrafts.Models;
 using ContosoCrafts.Services;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ContosoCrafts.Pages;

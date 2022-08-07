@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+builder.Services.AddControllers();
 //Registering the service class in the IOC container
 //Trasient objects are always different; a new instance is provided to every controller and every service.
 builder.Services.AddTransient<JsonFileProductService>();
@@ -27,6 +28,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+app.MapControllers();
 
 app.Run();
 
